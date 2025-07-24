@@ -1,9 +1,9 @@
 from datetime import datetime
 
 
-def filter_by_state(data_list: list, state = "EXECUTED") -> list:
+def filter_by_state(data_list: list, state: str = "EXECUTED") -> list:
     """Функция возвращает новый список словарей, содержащий только те словари, у которых ключ
-state соответствует указанному значению"""
+    state соответствует указанному значению"""
     filtered_list = []
     for item in data_list:
         if item.get("state") == state:
@@ -11,10 +11,6 @@ state соответствует указанному значению"""
     return filtered_list
 
 
-def sort_by_date(data_list: list, reverse = True) -> list:
+def sort_by_date(data_list: list, reverse: bool = True) -> list:
     """Функция должна возвращать новый список, отсортированный по дате"""
-    return sorted(
-        data_list,
-        key=lambda x: datetime.fromisoformat(x['date']),
-        reverse=reverse
-    )
+    return sorted(data_list, key=lambda x: datetime.fromisoformat(x["date"]), reverse=reverse)
