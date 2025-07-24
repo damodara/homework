@@ -2,7 +2,7 @@ from src.widget import get_date, mask_account_card
 
 
 def main() -> None:
-    """Основная функция для проверки"""
+    """Основная функция для проверки """
     values = [
         "Maestro 1596837868705199",
         "Счет 64686473678894779589",
