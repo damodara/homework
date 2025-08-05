@@ -20,7 +20,7 @@ def get_mask_account(account_number: str) -> str:
     **4305                   выход функции
     """
     if len(account_number) != 20 or not account_number.isdigit():
-        return "Номер карты должен быть строкой из 20 цифр"
+        return "Номер счета должен быть строкой из 20 цифр"
     else:
         return "**" + account_number[-4:]
 
