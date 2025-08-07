@@ -15,8 +15,12 @@ def mask_account_card(card_data: str) -> str:
 
     if name.lower() == 'счет':
         masked_number = get_mask_account(number)
+        if isinstance(masked_number, str) and masked_number.startswith("Номер"):  # Если возникла ошибка
+            return masked_number
     else:
         masked_number = get_mask_card_number(number)
+        if isinstance(masked_number, str) and masked_number.startswith("Номер"):  # Если возникла ошибка
+            return masked_number
 
     return f'{name} {masked_number}'
 
@@ -28,6 +32,9 @@ def get_date(date: str) -> str:
     и возвращает строку с датой в формате
     "ДД.ММ.ГГГГ"("11.03.2024")
     """
+    if len(date) < 19:  # Дата должна содержать минимум 19 символов (формат YYYY-MM-DDTHH:mm:ss.SSSSSS)
+        return "Недопустимый формат даты"
+
     year = date[:4]
     month = date[5:7]
     day = date[8:10]
