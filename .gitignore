@@ -37,7 +37,7 @@ pip-log.txt
 pip-delete-this-directory.txt
 
 # Unit test / coverage reports
-htmlcov/
+#htmlcov/
 .tox/
 .nox/
 .coverage
@@ -166,7 +166,7 @@ dmypy.json
 .pytype/
 
 # Cython debug symbols
-cython_debug/
+cython_dаebug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can

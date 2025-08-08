@@ -1,0 +1,115 @@
+import pytest
+
+
+@pytest.fixture
+def test_data() -> list:
+    return [
+        {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+        {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+        {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+    ]
+
+
+# Параметры для фильтрации по различным состояниям
+data_of_filter_by_state = [
+    {
+        "state": "EXECUTED",
+        "expected_result": [
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+        ],
+    },
+    {"state": "CANCELED", "expected_result": [{"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"}]},
+]
+
+# Параметры для сортировки по дате
+data_for_sort_by_date = [
+    {
+        "reverse": True,
+        "expected_result": [
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+        ],
+    },
+    {
+        "reverse": False,
+        "expected_result": [
+            {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+        ],
+    },
+]
+
+# Параметры для фильтрации по CANCELED
+data_for_filter_by_state_with_canceled = [
+    {"state": "CANCELED", "expected_result": [{"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"}]}
+]
+
+
+@pytest.fixture
+def valid_card_number() -> str:
+    # Возвращаем правильный номер карты
+    return "7000792289606361"
+
+
+@pytest.fixture
+def invalid_card_numbers() -> list:
+    # Список неправильных номеров карт для проверки ошибок
+    return ["123456789012345", "12345678901234567", "abcde1234567890", "!@#$%^&*()_+", ""]
+
+
+@pytest.fixture
+def valid_account_number() -> str:
+    # Возвращаем правильный номер счёта
+    return "73654108430135874305"
+
+
+@pytest.fixture
+def invalid_account_numbers() -> list:
+    # Список неправильных номеров счетов для проверки ошибок
+    return ["1234567890123456789", "123456789012345678901", "abcde1234567890", "!@#$%^&*()_+", ""]
+
+
+@pytest.fixture
+def valid_data() -> list:
+    # Валидные данные для успешной обработки
+    return [
+        ("Visa Platinum 7000792289606361", "Visa Platinum 7000 79** **** 6361"),
+        ("MasterCard Gold 5469241538462379", "MasterCard Gold 5469 24** **** 2379"),
+        ("Счет 73654108430135874305", "Счет **4305"),
+        ("Maestro Standard 1234567890123456", "Maestro Standard 1234 56** **** 3456"),
+    ]
+
+
+@pytest.fixture
+def invalid_data() -> list:
+    # Инвалидые данные для проверки обработки ошибок
+    return [
+        ("Visa Platinum 123456789012345", "Номер карты должен быть строкой из 16 цифр"),
+        ("MasterCard Gold abcde1234567890", "Номер карты должен быть строкой из 16 цифр"),
+        ("Счет 1234567890123456789", "Номер счета должен быть строкой из 20 цифр"),
+        ("Maestro Standard !@#$%^&*()", "Номер карты должен быть строкой из 16 цифр"),
+        ("Счет !@#$%^&*()", "Номер счета должен быть строкой из 20 цифр"),
+    ]
+
+
+@pytest.fixture
+def valid_dates() -> list:
+    # Валидные даты для тестирования преобразования формата
+    return [
+        ("2024-03-11T02:26:18.671407", "11.03.2024"),
+        ("2025-12-31T15:30:00.000000", "31.12.2025"),
+        ("2023-01-01T00:00:00.000000", "01.01.2023"),
+    ]
+
+
+@pytest.fixture
+def invalid_dates() -> list:
+    # Недопустимые даты для проверки ошибок
+    return [
+        ("2024-03-11", "Недопустимый формат даты"),
+        ("2025-12-31T", "Недопустимый формат даты"),
+        ("", "Недопустимый формат даты"),
+    ]
