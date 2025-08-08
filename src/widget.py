@@ -3,17 +3,17 @@ from src.masks import get_mask_account, get_mask_card_number
 
 def mask_account_card(card_data: str) -> str:
     """функция обрабатывает информацию как о картах, так и о счетах
-            # Пример для карты
-        Visa Platinum 7000792289606361  # входной аргумент
-        Visa Platinum 7000 79** **** 6361  # выход функции
+        # Пример для карты
+    Visa Platinum 7000792289606361  # входной аргумент
+    Visa Platinum 7000 79** **** 6361  # выход функции
 
-            # Пример для счета
-        Счет 73654108430135874305  # входной аргумент
-        Счет **4305  # выход функции
-        """
-    name, number = card_data.rsplit(' ', maxsplit=1)
+        # Пример для счета
+    Счет 73654108430135874305  # входной аргумент
+    Счет **4305  # выход функции
+    """
+    name, number = card_data.rsplit(" ", maxsplit=1)
 
-    if name.lower() == 'счет':
+    if name.lower() == "счет":
         masked_number = get_mask_account(number)
         if isinstance(masked_number, str) and masked_number.startswith("Номер"):  # Если возникла ошибка
             return masked_number
@@ -22,7 +22,7 @@ def mask_account_card(card_data: str) -> str:
         if isinstance(masked_number, str) and masked_number.startswith("Номер"):  # Если возникла ошибка
             return masked_number
 
-    return f'{name} {masked_number}'
+    return f"{name} {masked_number}"
 
 
 def get_date(date: str) -> str:

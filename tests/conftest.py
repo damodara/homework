@@ -2,6 +2,53 @@ import pytest
 
 
 @pytest.fixture
+def test_data() -> list:
+    return [
+        {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+        {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+        {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+    ]
+
+
+# Параметры для фильтрации по различным состояниям
+data_of_filter_by_state = [
+    {
+        "state": "EXECUTED",
+        "expected_result": [
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+        ],
+    },
+    {"state": "CANCELED", "expected_result": [{"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"}]},
+]
+
+# Параметры для сортировки по дате
+data_for_sort_by_date = [
+    {
+        "reverse": True,
+        "expected_result": [
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+        ],
+    },
+    {
+        "reverse": False,
+        "expected_result": [
+            {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
+            {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
+            {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
+        ],
+    },
+]
+
+# Параметры для фильтрации по CANCELED
+data_for_filter_by_state_with_canceled = [
+    {"state": "CANCELED", "expected_result": [{"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"}]}
+]
+
+
+@pytest.fixture
 def valid_card_number() -> str:
     # Возвращаем правильный номер карты
     return "7000792289606361"
@@ -65,14 +112,4 @@ def invalid_dates() -> list:
         ("2024-03-11", "Недопустимый формат даты"),
         ("2025-12-31T", "Недопустимый формат даты"),
         ("", "Недопустимый формат даты"),
-    ]
-
-
-@pytest.fixture
-def test_data() -> list:
-    # Набор исходных данных для тестирования
-    return [
-        {"id": 1, "state": "EXECUTED", "date": "2023-08-01T12:00:00"},
-        {"id": 2, "state": "CANCELED", "date": "2023-07-31T11:00:00"},
-        {"id": 3, "state": "EXECUTED", "date": "2023-08-02T13:00:00"},
     ]
