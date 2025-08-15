@@ -1,4 +1,4 @@
-from typing import Any, Dict, Generator
+from typing import Any, Dict, Generator, List
 
 
 def filter_by_currency(
@@ -18,7 +18,7 @@ def filter_by_currency(
     )
 
 
-def transaction_descriptions(transactions: list[Dict[str, Any]]) -> str:
+def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[str, None, None]:
     """
     Возвращает описание каждой операции по очереди
 
@@ -29,7 +29,7 @@ def transaction_descriptions(transactions: list[Dict[str, Any]]) -> str:
         yield transaction["description"]
 
 
-def card_number_generator(start_position: int, end_position: int) -> str:
+def card_number_generator(start_position: int, end_position: int) -> Generator[str, None, None]:
     """
     Генератор должен принимать начальное и конечное значения для генерации диапазона номеров
     Генератор может сгенерировать номера карт в заданном диапазоне от 0000 0000 0000 0001 до 9999 9999 9999 9999
