@@ -1,8 +1,12 @@
 import pytest
 
 from src.processing import filter_by_state, sort_by_date
-from tests.conftest import (data_for_filter_by_state_with_canceled, data_for_sort_by_date, data_of_filter_by_state,
-                            test_data)
+from tests.conftest import (
+    data_for_filter_by_state_with_canceled,
+    data_for_sort_by_date,
+    data_of_filter_by_state,
+    test_data,
+)
 
 
 @pytest.mark.parametrize("data", data_of_filter_by_state)

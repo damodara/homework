@@ -78,17 +78,19 @@ def main() -> None:
         },
     ]
     print(get_date(date_1))
+    print("_____________________________________________________________________")
     print(filter_by_state(values_2))
+    print("_____________________________________________________________________")
     print(sort_by_date(date_2))
-    print()
+    print("_____________________________________________________________________")
     usd_transactions = filter_by_currency(transactions, "USD")
     for _ in range(2):
         print(next(usd_transactions))
-    print()
+    print("_____________________________________________________________________")
     descriptions = transaction_descriptions(transactions)
     for _ in range(5):
         print(next(descriptions))
-    print()
+    print("_____________________________________________________________________")
     for card_number in card_number_generator(10001, 10004):
         print(card_number)
 

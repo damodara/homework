@@ -1,3 +1,7 @@
+from src.decorators import log
+
+
+@log(filename="mylog.txt")
 def get_mask_card_number(card_number: str) -> str:
     """Функция принимает на вход номер карты и возвращает ее маску
     7000792289606361        входной аргумент
@@ -14,6 +18,7 @@ def get_mask_card_number(card_number: str) -> str:
         return masked_number
 
 
+@log(filename="mylog.txt")
 def get_mask_account(account_number: str) -> str:
     """Функция принимает на вход номер счета и возвращает его маску
     73654108430135874305     входной аргумент
