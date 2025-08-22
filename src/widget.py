@@ -1,6 +1,8 @@
+from src.decorators import log
 from src.masks import get_mask_account, get_mask_card_number
 
 
+@log(filename="mylog.txt")
 def mask_account_card(card_data: str) -> str:
     """функция обрабатывает информацию как о картах, так и о счетах
         # Пример для карты
@@ -25,6 +27,7 @@ def mask_account_card(card_data: str) -> str:
     return f"{name} {masked_number}"
 
 
+@log(filename="mylog.txt")
 def get_date(date: str) -> str:
     """функция меняет формат даты.
     Принимает на вход строку с датой в формате

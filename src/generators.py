@@ -1,6 +1,9 @@
 from typing import Any, Dict, Generator, List
 
+from src.decorators import log
 
+
+@log(filename="mylog.txt")
 def filter_by_currency(
     transactions: list[Dict[str, Any]], currency_code: str
 ) -> Generator[Dict[str, Any], None, None]:
@@ -18,6 +21,7 @@ def filter_by_currency(
     )
 
 
+@log(filename="mylog.txt")
 def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[str, None, None]:
     """
     Возвращает описание каждой операции по очереди
@@ -29,6 +33,7 @@ def transaction_descriptions(transactions: List[Dict[str, Any]]) -> Generator[st
         yield transaction["description"]
 
 
+@log(filename="mylog.txt")
 def card_number_generator(start_position: int, end_position: int) -> Generator[str, None, None]:
     """
     Генератор должен принимать начальное и конечное значения для генерации диапазона номеров
