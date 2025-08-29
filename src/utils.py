@@ -1,6 +1,7 @@
 import json
 from typing import List
-from src.external_api import convert_currency
+
+import src.external_api as external_api
 
 
 def load_transactions(file_path: str) -> List[dict]:
@@ -14,7 +15,7 @@ def load_transactions(file_path: str) -> List[dict]:
     :return: Список словарей с данными транзакций
     """
     try:
-        with open(file_path, encoding='utf-8') as file:
+        with open(file_path, encoding="utf-8") as file:
             data = json.load(file)
 
         # Проверяем, что файл содержит именно список объектов
@@ -28,10 +29,10 @@ def load_transactions(file_path: str) -> List[dict]:
     except json.JSONDecodeError:
         # Ошибка в структуре JSON
         return []
-    except Exception as e:
-        # Любые другие непредвиденные исключения
-        print(f"Произошла ошибка: {e}")
-        return []
+    # except Exception as e:
+    #     # Любые другие непредвиденные исключения
+    #     print(f"Произошла ошибка: {e}")
+    #     return []
 
 
 def process_transaction(transaction: dict) -> float:
@@ -40,10 +41,10 @@ def process_transaction(transaction: dict) -> float:
     :param transaction: Словарь с информацией о транзакции
     :return: Сумма транзакции в рублях
     """
-    amount = transaction["operationAmount"]['amount']
-    currency = transaction['currency'].upper()
+    amount = transaction["operationAmount"]["amount"]
+    currency = transaction["operationAmount"]["currency"]["code"].upper()
 
-    if currency == 'RUB':
-        return amount
+    if currency == "RUB":
+        return float(amount)
     else:
-        return convert_currency(amount, currency)
+        return float(external_api.convert_currency(amount, currency))

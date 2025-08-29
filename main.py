@@ -1,10 +1,10 @@
 import json
 
+from src.external_api import convert_currency
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
 from src.processing import filter_by_state, sort_by_date
-from src.widget import get_date, mask_account_card
 from src.utils import load_transactions, process_transaction
-from src.external_api import convert_currency
+from src.widget import get_date, mask_account_card
 
 
 def main() -> None:
@@ -97,14 +97,20 @@ def main() -> None:
     print("_____________________________________________________________________")
     for card_number in card_number_generator(10001, 10004):
         print(card_number)
-    print("___________________________12.1 Библиотеки json, requests и datetime Part 1__________________________________________")
-    transactions = load_transactions('data/operations.json')
+    print("___________________________12.1 Библиотеки json, requests и datetime Part 1_______________________________")
+    transactions = load_transactions("data/operations.json")
     print(json.dumps(transactions, indent=4))
-    print("___________________________12.1 Библиотеки json, requests и datetime Part 2__________________________________________")
+    print("___________________________12.1 Библиотеки json, requests и datetime Part 2_______________________________")
     convert = convert_currency(amount=2, from_currency="USD")
     print(json.dumps(convert, indent=4))
-
-
+    print("___________________________12.1 Библиотеки json, requests и datetime Part 3_______________________________")
+    #
+    # processed_transactions = []
+    # for tx in transactions:
+    #     processed_trans = process_transaction(tx)
+    #     processed_transactions.append(processed_trans)
+    #     print(processed_transactions)
+    # # print(json.dumps(processed_transactions, indent=4))
 
 
 if __name__ == "__main__":
