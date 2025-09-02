@@ -4978,3 +4978,119 @@
 2025-09-02 21:07:53 - INFO - transaction_descriptions completed successfully with result: <generator object transaction_descriptions at 0x103e91e50>
 2025-09-02 21:07:53 - INFO - Starting execution of card_number_generator
 2025-09-02 21:07:53 - INFO - card_number_generator completed successfully with result: <generator object card_number_generator at 0x103dcf640>
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: 7000 79** **** 6361
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:23 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: **4305
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:47:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:23 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:47:51 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:51 - INFO - get_mask_card_number completed successfully with result: 7000 79** **** 6361
+2025-09-02 22:47:51 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:47:51 - INFO - get_mask_card_number completed successfully with result: Номер карты должен быть строкой из 16 цифр
+2025-09-02 22:47:51 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:51 - INFO - get_mask_account completed successfully with result: **4305
+2025-09-02 22:47:51 - INFO - Starting execution of get_mask_account
+2025-09-02 22:47:51 - INFO - get_mask_account completed successfully with result: Номер счета должен быть строкой из 20 цифр
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:51:23 - INFO - get_mask_card_number completed successfully with result: 1596 83** **** 5199
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Maestro 1596 83** **** 5199
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:51:23 - INFO - get_mask_account completed successfully with result: **9589
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Счет **9589
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:51:23 - INFO - get_mask_card_number completed successfully with result: 7158 30** **** 6758
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: MasterCard 7158 30** **** 6758
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:51:23 - INFO - get_mask_account completed successfully with result: **5560
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Счет **5560
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:51:23 - INFO - get_mask_card_number completed successfully with result: 6831 98** **** 7658
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Visa Classic 6831 98** **** 7658
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:51:23 - INFO - get_mask_card_number completed successfully with result: 8990 92** **** 5229
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Visa Platinum 8990 92** **** 5229
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:51:23 - INFO - get_mask_card_number completed successfully with result: 5999 41** **** 6353
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Visa Gold 5999 41** **** 6353
+2025-09-02 22:51:23 - INFO - Starting execution of mask_account_card
+2025-09-02 22:51:23 - INFO - Starting execution of get_mask_account
+2025-09-02 22:51:23 - INFO - get_mask_account completed successfully with result: **4305
+2025-09-02 22:51:23 - INFO - mask_account_card completed successfully with result: Счет **4305
+2025-09-02 22:51:23 - INFO - Starting execution of get_date
+2025-09-02 22:51:23 - INFO - get_date completed successfully with result: 11.07.2018
+2025-09-02 22:51:23 - INFO - Starting execution of filter_by_state
+2025-09-02 22:51:23 - INFO - filter_by_state completed successfully with result: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+2025-09-02 22:51:23 - INFO - Starting execution of filter_by_currency
+2025-09-02 22:51:23 - INFO - filter_by_currency completed successfully with result: <generator object filter_by_currency.<locals>.<genexpr> at 0x1045e3920>
+2025-09-02 22:51:23 - INFO - Starting execution of transaction_descriptions
+2025-09-02 22:51:23 - INFO - transaction_descriptions completed successfully with result: <generator object transaction_descriptions at 0x10468de50>
+2025-09-02 22:51:23 - INFO - Starting execution of card_number_generator
+2025-09-02 22:51:23 - INFO - card_number_generator completed successfully with result: <generator object card_number_generator at 0x10467f640>
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:52:11 - INFO - get_mask_card_number completed successfully with result: 1596 83** **** 5199
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Maestro 1596 83** **** 5199
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_account
+2025-09-02 22:52:11 - INFO - get_mask_account completed successfully with result: **9589
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Счет **9589
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:52:11 - INFO - get_mask_card_number completed successfully with result: 7158 30** **** 6758
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: MasterCard 7158 30** **** 6758
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_account
+2025-09-02 22:52:11 - INFO - get_mask_account completed successfully with result: **5560
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Счет **5560
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:52:11 - INFO - get_mask_card_number completed successfully with result: 6831 98** **** 7658
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Visa Classic 6831 98** **** 7658
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:52:11 - INFO - get_mask_card_number completed successfully with result: 8990 92** **** 5229
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Visa Platinum 8990 92** **** 5229
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_card_number
+2025-09-02 22:52:11 - INFO - get_mask_card_number completed successfully with result: 5999 41** **** 6353
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Visa Gold 5999 41** **** 6353
+2025-09-02 22:52:11 - INFO - Starting execution of mask_account_card
+2025-09-02 22:52:11 - INFO - Starting execution of get_mask_account
+2025-09-02 22:52:11 - INFO - get_mask_account completed successfully with result: **4305
+2025-09-02 22:52:11 - INFO - mask_account_card completed successfully with result: Счет **4305
+2025-09-02 22:52:11 - INFO - Starting execution of get_date
+2025-09-02 22:52:11 - INFO - get_date completed successfully with result: 11.07.2018
+2025-09-02 22:52:11 - INFO - Starting execution of filter_by_state
+2025-09-02 22:52:11 - INFO - filter_by_state completed successfully with result: [{'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03T18:35:29.512364'}, {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}]
+2025-09-02 22:52:11 - INFO - Starting execution of filter_by_currency
+2025-09-02 22:52:11 - INFO - filter_by_currency completed successfully with result: <generator object filter_by_currency.<locals>.<genexpr> at 0x107363bc0>
+2025-09-02 22:52:11 - INFO - Starting execution of transaction_descriptions
+2025-09-02 22:52:11 - INFO - transaction_descriptions completed successfully with result: <generator object transaction_descriptions at 0x107429e50>
+2025-09-02 22:52:11 - INFO - Starting execution of card_number_generator
+2025-09-02 22:52:11 - INFO - card_number_generator completed successfully with result: <generator object card_number_generator at 0x1073ff520>
