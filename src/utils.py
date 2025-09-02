@@ -1,7 +1,15 @@
 import json
+import logging
 from typing import List
 
 import src.external_api as external_api
+
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
+file_handler = logging.FileHandler('logs/utils.log', mode='w')
+file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: %(message)s')
+file_handler.setFormatter(file_formatter)
+logger.addHandler(file_handler)
 
 
 def load_transactions(file_path: str) -> List[dict]:
@@ -20,14 +28,16 @@ def load_transactions(file_path: str) -> List[dict]:
 
         # Проверяем, что файл содержит именно список объектов
         if isinstance(data, list):
+            logger.info("Файл содержит именно список объектов")
             return data
         else:
+            logger.error("Файл не содержит список объектов")
             return []
     except FileNotFoundError:
-        # Файл не найден
+        logger.error(f"Файл не найден: {file_path}")
         return []
     except json.JSONDecodeError:
-        # Ошибка в структуре JSON
+        logger.error(f"Ошибка в структуре JSON файла: {file_path}")
         return []
     # except Exception as e:
     #     # Любые другие непредвиденные исключения
