@@ -2,7 +2,7 @@ import json
 
 from src.external_api import convert_currency
 from src.generators import card_number_generator, filter_by_currency, transaction_descriptions
-from src.operations_loader import read_operations, read_csv, read_xlsx
+from src.operations_loader import read_operations
 from src.processing import filter_by_state, sort_by_date
 from src.utils import load_transactions, process_transaction
 from src.widget import get_date, mask_account_card
