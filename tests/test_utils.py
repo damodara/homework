@@ -67,7 +67,7 @@ def test_process_transaction_foreign_currency(mock_convert):
 
 
 # Тестируем транзакцию с исключением при ошибочной валюте
-def test_process_transaction_missing_fields()-> None:
+def test_process_transaction_missing_fields() -> None:
     transaction = {"operationAmount": {"amount": 100.0}}
     with pytest.raises(KeyError):
         process_transaction(transaction)
